@@ -4,24 +4,18 @@
 
 1. **Start FusionAuth locally** (default: http://localhost:9011)
 
-2. **Create an Application in FusionAuth:**
-   - Go to Applications → Add
-   - Set OAuth redirect URI: `http://localhost:8000/sso-callback.php`
-   - Enable OAuth and OpenID Connect
-   - Copy the Client ID and Client Secret
-
-3. **Update config.php** with your FusionAuth credentials:
+2. **Update config.php** with your FusionAuth credentials:
    ```php
    'client_id' => 'your-actual-client-id',
    'client_secret' => 'your-actual-client-secret',
    ```
 
-4. **Start PHP server:**
+3. **Start PHP server:**
    ```bash
    php -S 0.0.0.0:8000
    ```
 
-5. **Test:** Visit http://localhost:8000/sso-login.php
+4. **Test:** Visit http://localhost:8000/sso-login.php
 
 ## OAuth2/OpenID Connect Endpoints
 - Authorization: `http://localhost:8000/authorize.php`
